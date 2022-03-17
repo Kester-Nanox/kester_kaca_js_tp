@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kester_kaça_js_tp_2</title>
+
+    <style>
+        #pink {
+            width: 50px;
+            height: 50px;
+            background: pink;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="pink"></div>
+
+<script>
+
+/*document.onkeydown = function(e) {
+    let blocRose = document.getElementById('pink');
+
+    switch (e.keyCode) {
+        case 38:
+            // up arrow
+            //blocRose.style.top = parseInt(blocRose.style.top - 20) + 'px';
+            blocRose.style.top = parseInt(blocRose.style.top) - parseInt(20) + 'px';
+            break;
+        case 40:
+            // down arrow
+            //blocRose.style.top = parseInt(blocRose.style.top + 20) + 'px';
+            blocRose.style.top = parseInt(blocRose.style.top) + parseInt(20) + 'px';
+            break;
+        case 37:
+            // left arrow
+            //blocRose.style.left = parseInt(blocRose.style.left - 20) + 'px';
+            blocRose.style.left = parseInt(blocRose.style.left) - parseInt(20) + 'px';
+            break;
+        case 39:
+            // right arrow
+            //blocRose.style.left = parseInt(blocRose.style.left + 20) + 'px';
+            blocRose.style.left = parseInt(blocRose.style.left) + parseInt(20) + 'px';
+            
+            //onsole.log(blocRose.style.left + '20px')
+            break;
+    }
+}*/
+
+document.onkeydown = move;
+
+function move(e) {
+    var posLeft = document.getElementById('pink').offsetLeft;
+    var posTop = document.getElementById('pink').offsetTop;
+
+    //e = e || window.event;
+
+    if (e.keyCode == '38') {
+        // up
+        document.getElementById('pink').style.top  = (posTop - 20) + "px";
+    }
+    else if (e.keyCode == '40') {
+        // down
+        document.getElementById('pink').style.top  = (posTop + 20) + "px";
+    }
+    else if (e.keyCode == '37') {
+       // left
+        document.getElementById('pink').style.left  = (posLeft - 20) + "px";
+    }
+    else if (e.keyCode == '39') {
+       // right
+        document.getElementById('pink').style.left  = (posLeft + 20) + "px";
+    }
+}
+</script>
+    
+</body>
+</html>

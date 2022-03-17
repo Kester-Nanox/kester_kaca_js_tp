@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kester_kaça_js_tp_1</title>
+</head>
+
+<body>
+
+    <p>Balise p contenant du texte.</p>
+    <p>Balise p contenant du texte.</p>
+    <p>Balise p contenant du texte.</p>
+    
+<script>
+    function modifyP () {
+        // gras
+        document.getElementsByTagName('p')[0].style.fontWeight  = 'bold';
+                
+        // italic
+        document.getElementsByTagName('p')[1].style.fontStyle  = 'italic';
+                
+        // uppercase
+        document.getElementsByTagName('p')[2].style.textTransform  = 'uppercase';
+    }
+    modifyP();
+</script>
+</body>
+</html>

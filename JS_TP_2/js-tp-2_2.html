@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kester_kaça_js_tp_2</title>
+
+    <style>
+        ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #paris {
+            order: 1;
+        }
+        #madrid {
+            order: 2;
+        }
+        #rome {
+            order: 3;
+        }
+        #berlin {
+            order: 4;
+        }
+        #londres {
+            order: 5;
+        }
+    </style>
+</head>
+
+<body>
+
+<ul id="liste">
+    <li id="paris" onclick="toTop(this)">Paris</li>
+    <li id="madrid" onclick="toTop(this)">Madrid</li>
+    <li id="rome" onclick="toTop(this)">Rome</li>
+    <li id="berlin" onclick="toTop(this)">Berlin</li>
+    <li id="londres" onclick="toTop(this)">Londres</li>
+</ul>
+
+<script>
+    function toTop(x) {
+        paris.style.order = '1';
+        madrid.style.order = '2';
+        rome.style.order = '3';
+        berlin.style.order = '4';
+        londres.style.order = '5';
+
+        x.style.order = '0';
+    }
+</script>
+    
+</body>
+</html>

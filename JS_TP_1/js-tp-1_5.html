@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kester_kaça_js_tp_1</title>
+</head>
+
+<body>
+
+<h1>Titre</h1>
+
+<section>
+    <h2>Sous-Titre 1</h2>
+    <p>Texte 1_1</p>
+    <p>Texte 1_2</p>
+    <p>Texte 1_3</p>
+</section>
+
+<section>
+    <h2>Sous-Titre 2</h2>
+    <p>Texte 2_1</p>
+    <p>Texte 2_2</p>
+    <p>Texte 2_3</p>
+</section>
+
+<section>
+    <h2>Sous-Titre 3</h2>
+    <p>Texte 3_1</p>
+    <p>Texte 3_2</p>
+    <p>Texte 3_3</p>
+</section>
+
+<script>
+    function supprP () {
+        let listP = document.querySelectorAll("p");
+        for (let i = 0; i < listP.length; i++) {
+            listP[i].style.display = "none";
+        }
+    }
+    supprP()
+</script>
+</body>
+</html>

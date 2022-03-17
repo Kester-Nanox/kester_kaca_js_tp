@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kester_kaça_js_tp_1</title>
+</head>
+
+<body>
+    
+<script>
+    function generateDiv_H1() {
+        // generate div element
+        let myDiv = document.createElement('div');
+        document.getElementsByTagName('body')[0].appendChild(myDiv);
+
+        myDiv.style.width = '100%';
+        myDiv.style.height = '300px';
+        myDiv.style.background = 'purple';
+
+        // generate h1 element
+        let myH1 = document.createElement('h1');
+        myDiv.appendChild(myH1);
+        myH1.innerHTML = 'Je suis un H1';
+
+        myH1.style.color = '#fff';
+        myH1.style.textTransform = 'uppercase';
+    }
+    generateDiv_H1();
+</script>
+</body>
+</html>

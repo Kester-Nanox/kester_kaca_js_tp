@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kester_kaça_js_tp_2</title>
+
+    <style>
+        .style_black {
+            color: none;
+        }
+
+        .style_red {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 onclick="suppr(this)">Titre</h1>
+
+    <section>
+        <h2 onclick="suppr(this)">Sous-Titre 1</h2>
+        <p onclick="suppr(this)">Texte 1_1</p>
+        <p onclick="suppr(this)">Texte 1_2</p>
+        <p onclick="suppr(this)">Texte 1_3</p>
+    </section>
+    
+    <section>
+        <h2 onclick="suppr(this)">Sous-Titre 2</h2>
+        <p onclick="suppr(this)">Texte 2_1</p>
+        <p onclick="suppr(this)">Texte 2_2</p>
+        <p onclick="suppr(this)">Texte 2_3</p>
+    </section>
+    
+    <section>
+        <h2 onclick="suppr(this)">Sous-Titre 3</h2>
+        <p onclick="suppr(this)">Texte 3_1</p>
+        <p onclick="suppr(this)">Texte 3_2</p>
+        <p onclick="suppr(this)">Texte 3_3</p>
+    </section>
+      
+<script>
+    function suppr(myElement) {
+        let element = myElement;
+        element.remove();
+    }
+</script>
+    
+</body>
+</html>

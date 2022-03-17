@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kester_kaça_js_tp_2</title>
+</head>
+
+<body>
+
+<img id="img1" src="wiz.jpg" onclick="resize(this)">
+<img id="img2" src="wiz.jpg" onclick="resize(this)">
+
+<script>
+    function resize(imgSelected) {
+        
+        let image1 = document.getElementById('img1');
+        let image2 = document.getElementById('img2');
+        //console.log(image1.width);
+
+        image1.style.width = image1.width * 0.8 + "px";
+        image2.style.width = image2.width * 0.8 + "px";
+
+        imgSelected.style.width = imgSelected.width / 0.8 + "px";
+        imgSelected.style.width = imgSelected.width * 1.2 + "px";
+    }
+</script>
+    
+</body>
+</html>
