@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kester_kaça_js_tp_3</title>
+
+    <style>
+        div {
+            height: 50px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<script>
+    function divGeneration() {
+        let divNumber = Math.floor(Math.random() * 11) + 5;   
+
+        for (let i = 0; i <= divNumber; i++) {
+            const myDiv = document.createElement('div');
+            const myBody = document.querySelector("body");
+
+            myDiv.style.background = "rgb(" + Math.floor(Math.random() * 255) + ", " + Math.floor(Math.random() * 255) + ", " +  Math.floor(Math.random() * 255) + ")";
+
+            myBody.appendChild(myDiv);
+        }
+    }
+    divGeneration();
+
+
+
+    function divGenerationRed() {
+
+        const allDivs = document.querySelectorAll('div');
+
+        for (let j = 0; j < allDivs.length; j++) {
+            let colorsArray = [];
+
+            colorsArray.push(allDivs[j].style.background);
+
+            allDivs[j].addEventListener("click", function(e) {
+                if (e.target.style.background == 'red') {
+                    e.target.style.background = colorsArray[0];
+                } else {
+                    e.target.style.background = 'red';
+                }
+            })
+        }
+    }
+    divGenerationRed();
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kester_kaça_js_tp_3</title>
+
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background: #000;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div onclick="colorChange(this)"></div>
+<div onclick="colorChange(this)"></div>
+<div onclick="colorChange(this)"></div>
+
+<script>
+    let myDiv = document.getElementsByTagName('div');
+
+    function colorChange(myDiv) {
+
+        if (myDiv.style.background == 'black') {
+            myDiv.style.background = 'red';
+        } else {
+            myDiv.style.background = 'black';
+        }
+    }
+</script>
+    
+</body>
+</html>

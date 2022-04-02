@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kester_kaça_js_tp_4</title>
+</head>
+
+<body>
+
+
+<script>
+    let maChaine = "wizard technologies";
+
+    // Exercice 1: 
+    function revert(str) {
+        let maChaineSplit = str.split("");
+        let maChaineReverse = maChaineSplit.reverse();
+        let maChaineJoin = maChaineReverse.join("");
+
+        return maChaineJoin;
+    }
+    revert(maChaine);
+
+
+
+    // Exercice 2: 
+    function ucFirst(word) {
+        let maj = word.charAt(0).toUpperCase() + word.substr(1);
+        return maj;
+    }
+    ucFirst(maChaine);
+
+
+
+    // Exercice 3: 
+    function capitalize(str) {
+       return str.split(" ").map(ucFirst).join(" ");
+    }
+    capitalize(maChaine);
+
+
+
+    // Exercice 4: 
+    function pascalCase(str) {
+       return str.split(" ").map(ucFirst).join("");
+    }
+    pascalCase(maChaine);
+
+
+
+    // Exercice 5: 
+    function palindrome(str) {
+        if (str == revert(str)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    palindrome(maChaine);
+
+
+
+    // Exercice 6:
+    function findLongestWord(str) {
+        let myArray = str.split(" "),
+        longest = 0,
+        mot;
+
+        for (let i = 0; i < myArray.length; i++) {
+            if (myArray[i].length > longest) {
+                longest = myArray[i].length;
+                mot = myArray[i];
+            }
+        }
+        return mot;
+    }
+    findLongestWord(maChaine);
+</script>
+    
+</body>
+</html>

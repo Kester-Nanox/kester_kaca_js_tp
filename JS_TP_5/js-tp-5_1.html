@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kester_kaça_js_tp_5</title>
+</head>
+
+<body>
+<script>
+    const consigne = "Écrivez une fonction getHashTags(str) qui récupère les trois mots les plus longs d'une chaîne de caractère et les transforme en hashtags. Si plusieurs mots sont de la même longueur, récupérez le mot qui apparaît en premier."
+
+    function getHashTags(str) {
+        let myArray = str.split(" "),
+        longest = 0,
+        mot,
+        position,
+        myNewArray = [];
+
+        for (j = 0; j < 3; j++) {
+            for (let i = 0; i < myArray.length; i++) {
+                if (myArray[i].length > longest) {
+                    longest = myArray[i].length;
+                    mot = myArray[i];
+                    position = i;
+                }
+            }
+            
+            myNewArray.push(mot);
+            
+            myArray[position] = '';
+            longest = 0;
+        }
+
+        for (k = 0; k < myNewArray.length; k++) {
+            myNewArray[k] = '#' + myNewArray[k];
+        }
+
+        const longestWords = myNewArray.join(" ");
+        return longestWords;
+    }
+    getHashTags(consigne);
+</script>
+    
+</body>
+</html>

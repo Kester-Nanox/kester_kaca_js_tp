@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kester_kaça_js_tp_3</title>
+</head>
+
+<body>
+
+<div id="hauteur">
+    <p>Hauteur: <span></span></p>
+</div>
+
+<div id="largeur">
+    <p>Largeur: <span></span></p>
+</div>
+
+<script>
+    const hauteur = document.querySelector("#hauteur span");
+    const largeur = document.querySelector("#largeur span");
+
+    /*window.onresize = function() { 
+        hauteur.innerHTML = window.innerHeight;  
+        largeur.innerHTML = window.innerWidth; 
+    };*/
+
+    function display() {
+        hauteur.innerHTML = window.innerHeight;  
+        largeur.innerHTML = window.innerWidth; 
+    }
+
+    window.onload = display;
+    window.onresize = display;
+</script>
+    
+</body>
+</html>

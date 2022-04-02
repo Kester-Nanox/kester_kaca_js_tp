@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kester_kaça_js_tp_3</title>
+
+    <style>
+    </style>
+</head>
+
+<body>
+
+<script>
+    let myBody = document.querySelector("body");
+    let maListe = document.createElement('ul');
+
+    myBody.appendChild(maListe);
+
+    let myTab = [];
+
+    document.addEventListener("keydown", function(event) {
+        getKey(event.key);
+    });
+
+    function getKey(key) {
+        switch (key) {
+            /* case "a":
+            alert('a');
+            break; */
+
+            default:
+            console.log(event.key);
+            myTab.push(event.key);
+            console.log(myTab);
+
+            if (myTab.length >= 20) {
+                myTab.shift();
+            }
+
+            let rang = document.createElement('li');
+
+            for (let i = 0; i < myTab.length; i++) {
+                rang.innerHTML = myTab[i];
+                maListe.appendChild(rang);
+            }
+
+            if (maListe.childElementCount > 20) {
+                maListe.firstElementChild.remove();
+            }
+        }
+    }
+</script>
+    
+</body>
+</html>

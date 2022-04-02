@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kester_kaça_js_tp_5</title>
+</head>
+
+<body>
+
+<script>
+    const first = [0, 2, 4, 6, 8, 8], second = [1, 2, 3, 4, 5, 6];
+    let third = [];
+
+    function arrayDiff(first, second) {
+        for (let i = 0; i < first.length; i++) {
+            if (second.includes(first[i])) {
+                continue;
+            } else {
+                third.push(first[i]);
+            }
+        }
+
+        for (let i = 0; i < second.length; i++) {
+            if (first.includes(second[i])) {
+                continue;
+            } else {
+                third.push(second[i]);
+            }
+        }
+
+        third.sort();
+        for (let i = 0; i < third.length; i++) {
+            if (third[i] === third[i+1]) {
+                third.splice(i, 1);
+                i = 0;
+            }
+        }
+
+        return third;
+    }
+    arrayDiff(first, second);
+</script>
+    
+</body>
+</html>
