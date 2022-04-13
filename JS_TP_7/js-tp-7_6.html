@@ -1,0 +1,71 @@
+<ul id="listePeople"></ul>
+<br /><br />
+<ul id="listePlanets"></ul>
+<br /><br />
+<ul id="listeStarships"></ul>
+
+<script>
+// Avec fetch et https://swapi.dev/, recupérer la liste de tous les caractères, vaisseaux et planète et affichez les dans une liste. Vous devez utilisez des promesses, async / await & des try catch
+
+getPeople("https://swapi.dev/api/people");
+async function getPeople(file) {
+  let myObject = await fetch(file);
+  let myText = await myObject.text();
+  
+  let myTabPeople = myText.split("},{");
+  // console.log(myTabPeople);
+  /*let myTabPeopleFirst = myTabPeople[0].split();
+  for (let i = 0; i < myTabPeopleFirst.length; i++) {
+    if (myTabPeopleFirst[i] == "[") {
+      break;
+    } else {
+      for (let j = 0; j < i; j++) {
+        myTabPeopleFirst[j].shift();
+      }
+      break;
+    }
+  }
+  console.log(myTabPeopleFirst);*/
+
+  for (let i = 0; i < myTabPeople.length; i++) {
+    let myPeople = document.createElement("li");
+    myPeople.innerHTML = myTabPeople[i];
+    listePeople.appendChild(myPeople);
+    listePeople.style.color = 'purple';  
+  }
+}
+
+
+
+getPlanets("https://swapi.dev/api/planets");
+async function getPlanets(file) {
+  let myObject = await fetch(file);
+  let myText = await myObject.text();
+  
+  let myTabPlanets = myText.split("},{");
+
+  for (let i = 0; i < myTabPlanets.length; i++) {
+    let myPlanets = document.createElement("li");
+    myPlanets.innerHTML = myTabPlanets[i];
+    listePlanets.appendChild(myPlanets);
+    listePlanets.style.color = 'green';  
+  }
+}
+
+
+
+getStarships("https://swapi.dev/api/starships");
+async function getStarships(file) {
+  let myObject = await fetch(file);
+  let myText = await myObject.text();
+  
+  let myTabStarships = myText.split("},{");
+
+  for (let i = 0; i < myTabStarships.length; i++) {
+    let myStarships = document.createElement("li");
+    myStarships.innerHTML = myTabStarships[i];
+    listeStarships.appendChild(myStarships);
+    listeStarships.style.color = 'blue';  
+  }
+}
+</script>
